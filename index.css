@@ -1,0 +1,489 @@
+body,html{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.left{
+    position: left;
+    left: 0;
+    max-width: 30%;
+    height: calc(70vh-20);
+    background-color: rgb(125, 218, 88);
+    color: white;
+    padding-top: 5%;
+}
+.right{
+    position: right;
+    right: 0;
+    min-width: 70%;
+    height: 90vh;
+    background: linear-gradient(25deg, rgb(47, 127, 218) ,white);
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    animation: play 4s linear infinite alternate-reverse;
+    -webkit-animation: play 4s linear infinite alternate-reverse;
+}
+.right::-webkit-scrollbar{
+    display: none;
+}
+#vote{
+    width: 90%;
+    height: 100vh;
+    padding: 5% 1% 0 4%;
+    padding-right: 18%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    display: none;
+}
+body > h1{
+    background-color: rgb(138, 189, 118);
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+}
+body > div{
+    display: flex;
+}
+a{
+    display: inline-block;
+    width: 70%;
+    text-decoration: none;
+    margin: 2%;
+    margin-left: 10%;
+    color: white;
+}
+a:hover{
+    border-bottom: 2px solid rgb(211, 211, 43);
+}
+.left > img{
+    width: 90%;
+    height: 120px;
+    margin: -15px 0 4px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.animate{
+    width: 80%;
+    margin: 15% 9% 2% 9%;
+    height: 40vh;
+    box-shadow: 0 0 19px 1px black;
+    background-image: linear-gradient(25deg, rgb(47, 127, 218) ,white);
+}
+#vote > div{
+    width: 300px;
+    height: 30%;
+    background-color: rgb(165, 151, 151);
+    /* font-family: sans-serif; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+#vote > div > button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    align-self: flex-end;
+}
+#vote > div >h1{
+    margin-bottom: 1px;
+}
+.box > img{
+    width: 150px;
+    height: 80px;
+}
+#results{
+    background-color: rgb(12, 11, 11,0.5);
+    width: 100%;
+    height: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+#exit{
+    background-color: red;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    align-self: flex-end;
+    margin-right: 5%;
+    color: white;
+    font-size: x-large;
+}
+#results > section{
+    display: flex;
+    flex-flow: column;
+    width: 350px;
+   min-height: 400px;
+    background-color: rgb(85, 85, 117);
+    padding: 10px;
+}
+#results > section > output{
+    padding: 10px;
+    margin: 5px;
+    height: 50px;
+}
+#results > section > output > span{
+    float: right;
+    color: yellow;
+    font-size: large;
+}
+#results > section > output > h3{
+    margin-top: 2px;
+    margin-bottom: 7px;
+}
+#results > section > output:nth-child(odd){
+    background-color: rgb(78, 78, 61);
+}
+#results > section > output:nth-child(even){
+    background-color: gray;
+}
+#results > section > output > progress{
+    margin-left: 20px;
+}
+#results > h1{
+    color: blue;
+}
+.analysis > h5{
+    margin: 7px;
+}
+.analysis > h5 > span{
+    color: rgb(125, 218, 88);
+}
+.analysis{
+    width: 350px;
+}
+#settings{
+    width: 350px;
+    margin: auto;
+    margin-top: 5%;
+    padding:20px 15px;
+    display: none;
+    background-color: rgb(0, 0, 0,0.7);
+}
+#settings > h2{
+    text-align: center;
+}
+#settings > h4 > input,select{
+    float: right;
+    padding: 3px;
+    outline: none;
+}
+#settings > h4 > input[type="checkbox"]{
+    margin-top: -5px;
+    width: 25px;
+    height: 25px;
+}
+#settings > h4{
+    color: black;
+}
+#profile{
+    width: 270px;
+    background-color: rgb(125, 218, 88);
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    font-size: x-small;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: none;
+}
+#profile > button{
+    width: fit-content;
+    padding: 10px;
+    background-color: green;
+    border: none;
+    border-radius: 7px;
+    margin-top: 30px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+#profile > button:last-of-type{
+    float: right;
+    background-color: white;
+}
+#profile > img{
+    margin:5px 0 30px 60px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#votingBox{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.candidates{
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px black;
+}
+.candidates > h4{
+    text-align: center;
+    color: green;
+}
+.candidates > section{
+    height: 53px;
+padding: 5px 10px;
+display: flex;
+justify-content: space-between;
+}
+.candidates > section:nth-child(even){
+background-color: rgb(125, 218, 88);
+}
+.candidates > section:nth-child(odd){
+    margin: 15px 0;
+background-color: rgb(138, 189, 118);
+}
+.candidates > section > input{
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+}
+.candidates > section > h3{
+    color: black;
+}
+.candidates > section > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.candidates > button:first-of-type{
+    background-color: red;
+    float: left;
+}
+.candidates > button{
+    background-color: green;
+    padding: 5px;
+    width: 110px;
+    height: 40px;
+    float: right;
+    margin-top: 25px;
+    color: white;
+    border: none;
+}
+.success{
+    width: 80%;
+    position: fixed;
+    top: 80px;
+    background-color: transparent;
+    display: none;
+}
+.success > p{
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 10px;
+    background-color: grey;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.warning{
+    color: rgb(221, 40, 40);
+}
+.voting_guidelines{
+    background-color: rgb(0, 0, 0,0.7);
+    height: fit-content;
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 5%;
+    /* display: none; */
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.voting_guidelines > h2{
+    color: green;
+}
+.voting_guidelines > img{
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.voting_guidelines > button{
+    background-color: rgb(125, 218, 88);
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.voting_guidelines > button:first-of-type{
+    align-self: flex-start;
+}
+.voting_guidelines > button:last-of-type{
+    align-self: flex-end;
+    margin-top: -34px;
+}
+.voting_guidelines > p{
+    animation: attractive 20s linear infinite;
+    -webkit-animation: attractive 20s linear infinite;
+}
+
+.addContester{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    background-color: rgb(0, 0, 0,0.7);
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.addContester > fieldset{
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+}
+.addContester > fieldset > label > input[type="text"]{
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: transparent;
+    border-style: none none solid none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.addContester > fieldset > button{
+    color: white;
+    background-color: green;
+    border: none;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    align-self: flex-end;
+}
+.addContester > fieldset:last-of-type{
+    margin-top: 50px;
+}
+.addContester > fieldset:last-of-type > section:nth-child(even){
+    background-color: rgb(125, 218, 88);
+}
+.addContester > fieldset:last-of-type > section:nth-child(odd){
+    background-color: rgb(138, 189, 118);
+}
+.addContester > fieldset:last-of-type > section > button{
+    background-color: red;
+    color: white;
+    padding: 7px;
+    margin: 0 5px;
+    border: none;
+}
+.addContester > fieldset:last-of-type > section > img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.addContester > fieldset:last-of-type > section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.addContester > fieldset:last-of-type > section > h4{
+    color: black;
+}
+.addContester > h3 > span, .addContester > h4 > span{
+    color: white;
+}
+.addContester > h1{
+    text-align: center;
+}
+.addContester > h3,h4{
+    color: rgb(125, 218, 88);
+}
+.addContester > fieldset:first-of-type > legend{
+    color: rgb(3, 166, 253);;
+}
+#leg{
+    margin: auto;
+    color: rgb(3, 166, 253);
+}
+@keyframes play {
+    0%{background-position: initial;}
+    25%{background-size: 50% 25%;}
+    50%{ background-size: 100% 0%;}
+    75%{ background-size: 50% 25%;}
+    100%{ background-size: 10% 0%;}
+}
+@keyframes blured {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+@keyframes attractive {
+    0%{color : white;}
+    33%{color : yellow;}
+    66%{color :  rgb(47, 127, 218);}
+    100%{color :  white;}
+}

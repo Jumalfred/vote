@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>JASDEs Online Vote</title>
+</head>
+
+<body>
+    <h1>VOTING APP</h1>
+    <div>
+        <section class="left">
+            <img src="images/icon.png" alt="Voting">
+            <a>Home</a>
+            <a>My Profile</a>
+            <a>Vote</a>
+            <a>Settings</a>
+            <div class="animate"></div>
+        </section>
+        <section class="right">
+            <div id="vote">
+                <div class="box">
+                    <h1>PRESIDENTIAL</h1>
+                    <img src="images/vote.png" alt="VOTE">
+                    <button>Results</button>
+                </div>
+                <div class="box">
+                    <h1>DEPUTY PRESIDENT</h1>
+                    <img src="images/vote.png" alt="VOTE">
+                    <button>Results</button>
+                </div>
+                <div class="box">
+                    <h1>SECRETARY GENERAL</h1>
+                    <img src="images/vote.png" alt="VOTE">
+                    <button>Results</button>
+                </div>
+                <div class="box">
+                    <h1>MINISTER FOR FINANCE</h1>
+                    <img src="images/vote.png" alt="VOTE">
+                    <button>Results</button>
+                </div>
+                <div class="box">
+                    <h1>MINISTER FOR SPORTS</h1>
+                    <img src="images/vote.png" alt="VOTE">
+                    <button>Results</button>
+                </div>
+                <div class="box">
+                    <h1>MINISTER FOR HEALTH</h1>
+                    <img src="images/vote.png" alt="VOTE">
+                    <button>Results</button>
+                </div>
+                <div class="box">
+                    <!-- <h1>MINISTER FOR HEALTH</h1> -->
+                </div>
+                <div id="box">
+                    <!-- <h1>MINISTER FOR HEALTH</h1> -->
+                </div>
+                <div id="box">
+                    <!-- <h1>MINISTER FOR HEALTH</h1> -->
+                </div>
+            </div>
+            <div id="results">
+                <button id="exit" onclick="exitMenu()">x</button>
+                <h1>RESULTS</h1>
+                <div class="analysis">
+                    <h5>EXPECTED: <span>1000 votes</span></h5>
+                    <h5>TURN OUT: <span>50%</span></h5>
+                    <h5>TOTAL VOTES: <span>500</span></h5>
+                </div>
+                <section>
+                    <output>
+                        <h3>Alfred Juma</h3>
+                        <progress value="72" max="100"></progress>
+                        <span>72 Votes</span>
+                    </output>
+                    <output>
+                        <h3>Juma Alfred</h3>
+                        <progress value="50" max="100"></progress>
+                        <span>50 Votes</span>
+                    </output>
+                    <output>
+                        <h3>Oginga Alfred</h3>
+                        <progress value="45" max="100"></progress>
+                        <span>45 Votes</span>
+                    </output>
+                    <output>
+                        <h3>Otieno Felix</h3>
+                        <progress value="32" max="100"></progress>
+                        <span>32 Votes</span>
+                    </output>
+                    <output>
+                        <h3>Felix Otieno</h3>
+                        <progress value="21" max="100"></progress>
+                        <span>21 Votes</span>
+                    </output>
+                </section>
+            </div>
+            <div id="settings">
+                <h2>SETTINGS</h2>
+                <h4>Dashboard animation <input type="checkbox" name="" id=""></h4>
+                <h4>Dashboard background color <input type="color" id=""></h4>
+                <h4>Dashboard text color <input type="color" id=""></h4>
+                <h4>Side nav text color <input type="color" id=""></h4>
+                <h4>Side nav background color <input type="color" id=""></h4>
+                <h4>Fonts <select name="font" id="font">
+                        <option value="">Sans Serif</option>
+                        <option value="">Times New Roman</option>
+                        <option value="">Calibre</option>
+                    </select></h4>
+            </div>
+            <div id="profile">
+                <img src="images/voter.jpg" alt="User">
+                <h2>Name : <span>OGINGA ALFRED JUMA</span></h2>
+                <h2>Email : <span>jumextoginga@gmail.com</span></h2>
+                <h2>Reg No : <span>2552</span></h2>
+                <h2>Department : <span>Software Development</span></h2>
+                <button>Results</button>
+                <button onclick="clearContainer(),openAdminPage()">Create Poll</button>
+            </div>
+            <div id="votingBox">
+                <div class="candidates">
+                    <h4>PRESIDENTIAL</h4>
+                    <button onclick="exitMenu()">CANCEL</button>
+                    <button onclick="voted()">SUBMIT</button>
+                </div>
+            </div>
+            <div class="success"> <p>Voting process successful</p></div>
+            <div class="welcomePage">
+                <div class="voting_guidelines">
+                    <img src="images/ballot.jpg" alt="vote">
+                    <h2>VOTING GUIDELINES</h2>
+                    <ul>
+                        <li>Click on the 'vote' button to go to the voting panel.</li>
+                        <li>Tap on to the post you want to cast your vote for.
+                            <ul>
+                            <li>If you have voted earlier then the system will deny you a chance to vote again.</li>
+                        </ul>
+                        </li>
+                        <li>Check your preferred candidate and mark his/her box. 
+                            <ul>
+                                <li class="warning">Unmark your selection before you submit if you have made one by mistake.</li>
+                            </ul>
+                        </li>
+                        <li>Click on the submit button to cast your vote.</li>
+
+                    </ul>
+                    <p>Enjoy your voting process</p>
+                    <button onclick="clearContainer(),voteIn()">VOTE</button>
+                    <button onclick="clearContainer(),openAdminPage()">LOGIN AS ADMIN TO CREATE A POLL</button>
+                </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
